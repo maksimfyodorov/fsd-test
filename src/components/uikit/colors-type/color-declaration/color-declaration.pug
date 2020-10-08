@@ -1,0 +1,21 @@
+mixin color-declaration(options)
+    
+    -
+        var colorsItem = "colors-type__colors-item"
+        if (options.colorName === "Dark Shade 100%")
+            colorsItem += " dark-shade100"
+        else if (options.colorName === "Dark Shade 75%")
+            colorsItem += " dark-shade75"
+        else if (options.colorName === "Dark Shade 50%")
+            colorsItem += " dark-shade50"
+        else if (options.colorName === "Dark Shade 25%")
+            colorsItem += " dark-shade25"
+        else if (options.colorName === "Dark Shade 5%")
+            colorsItem += " dark-shade5"
+        
+    div(class = colorsItem)
+        p= options.colorName 
+        p= options.colorRGB 
+
+
+         

@@ -1,0 +1,17 @@
+include ../../../components/uikit/colors-type/color-declaration/color-declaration
+
+- var colors = [{colorName: "Dark Shade 100%", colorRGB: "#1F2041"}, {colorName: "Dark Shade 75%", colorRGB: "#1F2041"}, {colorName: "Dark Shade 50%", colorRGB: "#1F2041"}, {colorName: "Dark Shade 25%", colorRGB: "#1F2041"}, {colorName: "Dark Shade 5%", colorRGB: "#1F2041"}]
+
+section.colors-type
+    .container
+        .colors-type__colors
+            for i in colors
+                +color-declaration({colorName: i.colorName, colorRGB: i.colorRGB})
+           
+
+
+
+           
+
+           
+

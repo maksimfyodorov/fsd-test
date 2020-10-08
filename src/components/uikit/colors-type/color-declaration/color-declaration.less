@@ -1,0 +1,43 @@
+.colors-type__colors-item {
+    position: relative;
+    padding-top: 7px;
+    margin-bottom: 30px;
+
+    font-family: Quicksand;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 29px;
+
+    background-color: orange;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: -110px;
+        top: 0;
+        width: 70px;
+        height: 70px;
+        // background-color: #1f2041;
+        border-radius: 6px;
+    }
+
+    .dark-shade100&::before {
+        background-color: #1f2041;
+    }
+
+    .dark-shade75&::before {
+        background-color: rgba(31, 32, 65, 0.75);
+    }
+
+    .dark-shade50&::before {
+        background-color: rgba(31, 32, 65, 0.50);
+    }
+
+    .dark-shade25&::before {
+        background-color: rgba(31, 32, 65, 0.25);
+    }
+
+    .dark-shade5&::before {
+        background-color: rgba(31, 32, 65, 0.05);
+    }
+}
