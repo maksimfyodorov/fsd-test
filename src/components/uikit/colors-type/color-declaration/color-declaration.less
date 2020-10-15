@@ -1,14 +1,24 @@
 .colors-type__colors-item {
     position: relative;
     padding-top: 7px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 
-    font-family: Quicksand;
+    font-family: var(--title-font);
     font-weight: 700;
     font-size: 19px;
     line-height: 29px;
+    color: var(--dark-shade-100);
 
-    background-color: orange;
+    // background-color: orange;
+
+    .font400 {
+        font-family: var(--title-font);
+        font-weight: 400;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 
     &::before {
         content: "";
@@ -17,27 +27,35 @@
         top: 0;
         width: 70px;
         height: 70px;
-        // background-color: #1f2041;
         border-radius: 6px;
     }
 
-    .dark-shade100&::before {
-        background-color: #1f2041;
+    .dark-shade-100&::before {
+        background-color: var(--dark-shade-100);
     }
 
-    .dark-shade75&::before {
-        background-color: rgba(31, 32, 65, 0.75);
+    .dark-shade-75&::before {
+        background-color: var(--dark-shade-75);
     }
 
-    .dark-shade50&::before {
-        background-color: rgba(31, 32, 65, 0.50);
+    .dark-shade-50&::before {
+        background-color: var(--dark-shade-50);
     }
 
-    .dark-shade25&::before {
-        background-color: rgba(31, 32, 65, 0.25);
+    .dark-shade-25&::before {
+        background-color: var(--dark-shade-25);
     }
 
-    .dark-shade5&::before {
-        background-color: rgba(31, 32, 65, 0.05);
+    .dark-shade-5&::before {
+        background-color: var(--dark-shade-5);
+    }
+
+    .purple&::before {
+        background-color: var(--purple);
+    }
+
+    .green&::before {
+        background-color: var(--green);
     }
 }
+

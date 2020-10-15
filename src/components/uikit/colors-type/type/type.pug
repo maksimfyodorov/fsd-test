@@ -1,0 +1,24 @@
+include ./widget-title/widget-title
+include ./widget-subtitle/widget-subtitle
+include ./label-text/label-text
+
+
+mixin type
+    .colors-type__type-item
+        .type-item__h1-tag h1
+        .type-item__h1-text 
+            +widget-title("This one is the sub-section or widget title")
+    .colors-type__type-item
+        .type-item__h2-tag h2
+        .type-item__h2-text 
+            +widget-subtitle("Next one is the item title inside widgets")
+    .colors-type__type-item
+        .type-item__h3-tag h3
+        .type-item__h3-text 
+            +label-text("This is a label or CTA text")
+    .colors-type__type-item
+        .type-item__body-tag Body
+        .type-item__body-text 
+            p This is the body text which is used for most of the design, like paragraphs, lists, etc.
+
+    

@@ -3,19 +3,23 @@ mixin color-declaration(options)
     -
         var colorsItem = "colors-type__colors-item"
         if (options.colorName === "Dark Shade 100%")
-            colorsItem += " dark-shade100"
+            colorsItem += " dark-shade-100"
         else if (options.colorName === "Dark Shade 75%")
-            colorsItem += " dark-shade75"
+            colorsItem += " dark-shade-75"
         else if (options.colorName === "Dark Shade 50%")
-            colorsItem += " dark-shade50"
+            colorsItem += " dark-shade-50"
         else if (options.colorName === "Dark Shade 25%")
-            colorsItem += " dark-shade25"
+            colorsItem += " dark-shade-25"
         else if (options.colorName === "Dark Shade 5%")
-            colorsItem += " dark-shade5"
+            colorsItem += " dark-shade-5"
+        else if (options.colorName === "Purple")
+            colorsItem += " purple"
+        else if (options.colorName === "Green")
+            colorsItem += " green"
         
     div(class = colorsItem)
         p= options.colorName 
-        p= options.colorRGB 
+        p(class = "font400")= options.colorRGB 
 
 
          
