@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="logo-wrapper"><img src="./img/logo.svg" alt=""></div>
-    <section class="colors-type">
+    <section class="colors-type none">
       <div class="container">
         <div class="colors-type__colors">
               <div class="colors-type__colors-item dark-shade-100">
@@ -67,6 +67,97 @@
                 </div>
               </div>
         </div>
+      </div>
+    </section>
+    <section class="form-elements">
+      <div class="container">
+        <div class="form-elements__col-3 mr130">
+          <div class="text-field-title">
+                      <h3 class="label-text">Text Field</h3><span>Default</span>
+          </div>
+          <div class="text-field-wrapper">
+                      <div>
+                        <input class="text-field" type="text" placeholder="Email">
+                      </div>
+          </div>
+          <div class="text-field-title">
+                      <h3 class="label-text">Text Field</h3><span>Hover / Focus</span>
+          </div>
+          <div class="text-field-wrapper">
+                      <div>
+                        <input class="text-field hover" type="text" placeholder="Email" value="This is pretty awesome">
+                      </div>
+          </div>
+          <div class="text-field-title">
+                      <h3 class="label-text">Dropdown</h3>
+          </div>
+          <div class="text-field-wrapper">
+                      <div class="input-wrapper-for-dropdown">
+                        <input class="text-field" type="text" value="Сколько гостей">
+                      </div>
+          </div>
+          <div class="text-field-title">
+                      <h3 class="label-text">masked text field</h3>
+          </div>
+          <div class="masked-text-field-wrapper">
+                      <div>
+                        <input class="text-field" type="text" placeholder="ДД.ММ.ГГГГ">
+                      </div>
+          </div>
+          <div class="date-dropdown-wrapper">
+            <div class="date-dropdown-item">
+              <div class="text-field-title">
+                          <h3 class="label-text">date Dropdown</h3>
+              </div>
+                        <div class="input-wrapper-for-dropdown">
+                          <input class="text-field small" type="text" value="ДД.ММ.ГГГГ">
+                        </div>
+            </div>
+            <div class="date-dropdown-item">
+              <div class="text-field-title">
+                          <h3 class="label-text">date Dropdown</h3>
+              </div>
+                        <div class="input-wrapper-for-dropdown">
+                          <input class="text-field small" type="text" value="19.08.2019">
+                        </div>
+            </div>
+          </div>
+          <div class="masked-text-field-wrapper">
+            <div class="text-field-title">
+                        <h3 class="label-text">filter date dropdown</h3>
+            </div>
+                      <div class="input-wrapper-for-dropdown">
+                        <input class="text-field medium" type="text" value="19 авг - 23 авг">
+                      </div>
+          </div>
+          <div class="text-field-title">
+                      <h3 class="label-text">subscription text field</h3>
+          </div>
+                    <div class="input-wrapper-for-subscription">
+                      <input class="text-field medium" type="text" placeholder="Email">
+                    </div>
+        </div>
+        <div class="form-elements__col-3">
+          <div class="top-middle-col__title-wrapper">
+                      <h3 class="label-text">Checkbox Buttons</h3>
+          </div>
+                    <label class="label-checkbox">
+                      <input class="real-checkbox" type="checkbox">
+                      <div class="custom-checkbox"></div><span>Можно курить</span>
+                    </label>
+                    <label class="label-checkbox">
+                      <input class="real-checkbox" type="checkbox">
+                      <div class="custom-checkbox"></div><span>Можно с питомцами</span>
+                    </label>
+                    <label class="label-checkbox">
+                      <input class="real-checkbox" type="checkbox">
+                      <div class="custom-checkbox"></div><span>Можно пригласить гостей (до 10 человек)</span>
+                    </label>
+        </div>
+        <div class="form-elements__col-3"></div>
+        <div class="form-elements__col-3 mr130 mb0"></div>
+        <div class="form-elements__col-3 mb0"></div>
+        <div class="form-elements__col-3 mb0"></div>
       </div>
     </section>
   <script src="main.js"></script></body>

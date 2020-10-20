@@ -1,0 +1,13 @@
+mixin text-field(options)
+
+    -
+        var wrapperClassName = ""
+        wrapperClassName += options.isDropdown ? "input-wrapper-for-dropdown" : ""
+        wrapperClassName += options.isSubscr ? "input-wrapper-for-subscription" : ""
+        var inputClassName = "text-field"
+        inputClassName += options.isHover ? " hover" : ""
+        inputClassName += options.isSmall ? " small" : ""
+        inputClassName += options.isMedium ? " medium" : ""
+    div(class = wrapperClassName)
+        input(class=inputClassName type="text" placeholder=options.placeholder value=options.text)
+
