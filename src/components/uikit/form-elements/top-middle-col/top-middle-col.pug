@@ -1,15 +1,43 @@
 include ../../colors-type/type/label-text/label-text
 include ../text-field/text-field
 include ../checkbox/checkbox
+include ../radio-btn/radio-btn
+include ../toggle-btn/toggle-btn
+include ../like-btn/like-btn
+include ../star-rating/star-rating
 
-.top-middle-col__title-wrapper
-    +label-text("Checkbox Buttons")
+.top-middle-col__item
+    .top-middle-col__item-title
+        +label-text("Checkbox Buttons")
+    +checkbox({text: "Можно курить"})
+    +checkbox({text: "Можно с питомцами"})
+    +checkbox({text: "Можно пригласить гостей (до 10 человек)"})
 
-+checkbox({text: "Можно курить"})
-+checkbox({text: "Можно с питомцами"})
-+checkbox({text: "Можно пригласить гостей (до 10 человек)"})
+.top-middle-col__item
+    .top-middle-col__item-title
+        +label-text("Radio Buttons")
+    +radio-btn({text: "Мужчина"})
+    +radio-btn({text: "Женщина"})
 
+.top-middle-col__item
+    .top-middle-col__item-title
+        +label-text("Toggle")
+    .item__toggle-wrapper
+        +toggle-btn({text: "Получать спецпредложения"})
+    +toggle-btn({text: "Получать спецпредложения"})
+    
+.top-middle-col__item
+    .top-middle-col__item-title
+        +label-text("like button")
+    .item__like-btns-wrapper    
+        .item__like-btn-wrapper    
+            +like-btn({counter: "0"})
+        +like-btn({counter: "12", isLiked: true})
 
-
-
+.top-middle-col__item
+    .top-middle-col__item-title
+        +label-text("rate button")
+    .item__star-rating-wrapper    
+        +star-rating({ratingNumber: "1"})
+    +star-rating({ratingNumber: "2"})
     

@@ -1,0 +1,17 @@
+include ../star/star
+
+mixin star-rating(options)
+    -
+        var number = options.ratingNumber
+
+    .rating(data-rating=number)
+        .rating-item(data-rate="1")
+            +star({})
+        .rating-item(data-rate="2")
+            +star({})
+        .rating-item(data-rate="3")
+            +star({})
+        .rating-item(data-rate="4")
+           +star({})
+        .rating-item(data-rate="5")
+            +star({})

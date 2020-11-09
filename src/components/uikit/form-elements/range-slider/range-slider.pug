@@ -1,0 +1,18 @@
+include ../../colors-type/type/label-text/label-text
+
+mixin range-slider
+    .slider__wrapper
+        .slider__title-and-price
+            +label-text("Range Slider")
+            span.slider__price-range
+                span.slider__low-price 0
+                |&#8381; - 
+                span.slider__tall-price 15 000
+                |&#8381;
+        .slider
+            .slider__between
+            .slider__btn-1
+            .slider__btn-2
+
+
+
