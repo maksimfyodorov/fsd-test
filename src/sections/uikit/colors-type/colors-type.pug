@@ -5,8 +5,9 @@ include ../../../components/uikit/colors-type/type/type
 
 section.colors-type.none
     .container
-        .colors-type__colors
-            for i in colors
-                +color-declaration({colorName: i.colorName, colorRGB: i.colorRGB})
-        .colors-type__type
-            +type
+        .colors-type__content
+            .colors-type__colors
+                for i in colors
+                    +color-declaration({colorName: i.colorName, colorRGB: i.colorRGB})
+            .colors-type__type
+                +type

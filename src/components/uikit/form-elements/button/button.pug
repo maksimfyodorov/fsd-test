@@ -1,0 +1,13 @@
+mixin button(options)
+    -
+        var  className = "button"
+        className += options.isBackground ? " bg" : ""
+        className += options.isText ? " text" : ""
+        className += options.isLarge ? " bg large" : ""
+
+        var arrow = "btn-arrow"
+        arrow += !options.isLarge ? " none" : ""
+
+    button(class=className type="submit")= options.text
+        div(class=arrow)
+        

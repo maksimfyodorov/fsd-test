@@ -1,6 +1,21 @@
 include ../../colors-type/type/label-text/label-text
 include ../range-slider/range-slider
+include ../button/button
 
-.top-right-col__range-slider-wrapper
-    .top-right-col__range-slider
-        +range-slider
+.top-right-col__range-slider
+    +range-slider({title: "range slider"})
+
+.top-right-col__buttons
+    .buttons__title
+        +label-text("buttons")
+    .buttons__btns-background
+        +button({text: "CLICK ME", isBackground: true})
+        +button({text: "CLICK ME", isBackground: true})
+    .buttons__btns-border
+        +button({text: "CLICK ME"})
+        +button({text: "CLICK ME"})
+    .buttons__btns-text
+        +button({text: "CLICK ME", isText: true})
+        +button({text: "CLICK ME", isText: true})
+    .buttons__btns-large
+        +button({text: "перейти к оплате", isLarge: true})
