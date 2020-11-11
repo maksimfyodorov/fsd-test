@@ -19,3 +19,17 @@ include ../button/button
         +button({text: "CLICK ME", isText: true})
     .buttons__btns-large
         +button({text: "перейти к оплате", isLarge: true})
+
+.top-right-col__pagination
+    .pagination__title
+        +label-text("pagination")
+    .pagination
+        .pagination__numeration
+            .numeration__first-child 1
+            div 2
+            div 3
+            div ...
+            div 15
+            .numeration__last-child 
+                span
+        .pagination__desc 1 – 12 из 100+ вариантов аренды
