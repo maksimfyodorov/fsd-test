@@ -1,0 +1,19 @@
+mixin users
+    -
+        var users = [
+                        {img: "./img/uikit/form-elements/users/user-1.1.jpg", alt: "User photo", name: "Мурад Сарафанов", date: "5 дней назад", 
+                         review: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."},
+                    ]
+    .users
+        for i in users
+            .user
+                .user__wrap
+                    .user__img
+                        img(src=i.img alt=i.alt)
+                    .user__text-content
+                        .user__name.bold= i.name
+                        .user__review-date= i.date
+                .user__review-wrap
+                    .user__like-btn
+                        +like-btn({isLiked: true, counter: 12})
+                    .user__review= i.review

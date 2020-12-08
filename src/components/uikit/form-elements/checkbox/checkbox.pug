@@ -1,8 +1,13 @@
 mixin checkbox(options)
+    -
+        var className = "label-checkbox"
+        className += options.richCheckbox ? " rich-checkbox" : ""
+        className += options.bulletList ? " bullet-list" : ""
 
-    label.label-checkbox
+    label(class=className)
         input.real-checkbox(type="checkbox") 
         .custom-checkbox
         div(class="checkbox-text")= options.text
+        div(class="rich-checkbox-desc")= options.richCheckboxDesc
 
         

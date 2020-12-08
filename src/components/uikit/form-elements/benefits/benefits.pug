@@ -1,0 +1,15 @@
+mixin benefits
+    -
+        var benefits = [
+                            {img: "./img/uikit/form-elements/benefits/smile.svg", alt: "Smile icon", name: "Комфорт", desc: "Шумопоглощающие стены"},
+                            {img: "./img/uikit/form-elements/benefits/house.svg", alt: "House icon", name: "Удобство", desc: "Окно в каждой из спален"}
+                       ]
+
+    .benefits   
+        for i in benefits
+            .benefits__item
+                .benefits__img
+                    img(src=i.img alt=i.alt)
+                .benefits__text-content
+                    .benefits__name.bold= i.name
+                    .benefits__desc= i.desc

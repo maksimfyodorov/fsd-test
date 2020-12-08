@@ -1,0 +1,21 @@
+include ../text-field/text-field
+include ../checkbox/checkbox
+include ../../colors-type/type/label-text/label-text-span
+
+mixin dropdown(options)
+    -
+        var type = ""
+        type += options.typeGuests ? "guests" : ""
+        type += options.typeRoomsConfig ? "rooms-config" : ""
+        type += options.typeCheckboxList ? "checkbox-list" : ""
+        var isTrue 
+        options.typeRoomsConfig || options.typeCheckboxList ? isTrue = true : isTrue = false
+        var list = ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь", "Телевизор", "Шампунь"]
+
+    .select(data-type=type)
+        .select__backdrop
+        .select__input
+            +text-field({text:"expandable checkbox list", isMedium: isTrue, isDropdown: true})
+        .select__dropdown
+            for i in list
+                +checkbox({text: i})

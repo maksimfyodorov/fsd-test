@@ -1,13 +1,16 @@
 mixin text-field(options)
-
     -
-        var wrapperClassName = ""
-        wrapperClassName += options.isDropdown ? "input-wrapper-for-dropdown" : ""
-        wrapperClassName += options.isSubscr ? "input-wrapper-for-subscription" : ""
-        var inputClassName = "text-field"
-        inputClassName += options.isHover ? " hover" : ""
-        inputClassName += options.isSmall ? " small" : ""
-        inputClassName += options.isMedium ? " medium" : ""
+        var wrapperClassName = "text-field"
+        wrapperClassName += options.isDropdown ? " dropdown" : ""
+        wrapperClassName += options.isSubscr ? " subscription" : ""
+        wrapperClassName += options.isHover ? " hover" : ""
+        wrapperClassName += options.isSmall ? " small" : ""
+        wrapperClassName += options.isMedium ? " medium" : ""
+        wrapperClassName += options.borderNone ? " border-none" : ""
+        var inputClassName = "input"
+        inputClassName += options.borderNone ? " border-none-text" : ""
+        
     div(class = wrapperClassName)
         input(class=inputClassName type="text" placeholder=options.placeholder value=options.text)
-
+        span.set-input-width
+        span ...

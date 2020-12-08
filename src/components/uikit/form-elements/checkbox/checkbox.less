@@ -1,12 +1,64 @@
 .label-checkbox {
+    position: relative;
     display: flex;
+    align-items: center;
     margin-bottom: 15px;
-
     cursor: pointer;
 
     & .checkbox-text {
         width: 190px;
+        color: var(--dark-shade-50);
     }
+
+    &.rich-checkbox {
+        padding-bottom: 36px;
+
+        .checkbox-text {
+            width: 203px;
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--dark-shade-75);
+        }
+
+        .rich-checkbox-desc {
+            display: block;
+        }
+    }
+
+    &.bullet-list {
+        align-items: baseline;
+        
+        .checkbox-text{
+            width: 232px;
+            color: var(--dark-shade-75);
+        }
+
+        .custom-checkbox  {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: none;
+            background: var(--dark-shade-25);
+
+            &::before {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                border: none;
+                background: var(--dark-shade-75);
+            }
+        }
+    }
+}
+
+.rich-checkbox-desc {
+    display: none;
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    width: 260px;
+    white-space: pre-wrap;
+    color: var(--dark-shade-50);
 }
 
 .real-checkbox {
@@ -19,7 +71,6 @@
 
 .custom-checkbox {
     position: relative;
-    display: inline-block;
     width: 20px;
     height: 20px;
     margin-right: 10px;

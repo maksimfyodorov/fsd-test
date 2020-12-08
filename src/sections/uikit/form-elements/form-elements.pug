@@ -1,6 +1,11 @@
+include ../../../components/uikit/form-elements/dropdown/dropdown
+include ../../../components/uikit/form-elements/checkbox/checkbox
+include ../../../components/uikit/form-elements/benefits/benefits
+include ../../../components/uikit/form-elements/users/users
+
 section.form-elements
     .container
-        .form-elements__content
+        .form-elements__top-row
             .form-elements__col-3
                 include ../../../components/uikit/form-elements/top-left-col/top-left-col
             .form-elements__col-3
@@ -8,3 +13,44 @@ section.form-elements
             .form-elements__col-3
                 include ../../../components/uikit/form-elements/top-right-col/top-right-col
         
+        .form-elements__dropdown
+            .form-elements__dropdown-left.mr130
+                .text-field-title
+                    +label-text("dropdown")
+                    span Default
+                .text-field-wrapper
+                    +text-field({text:"2 спальни, 2 кровати...", isMedium: true, isDropdown: true})
+                .text-field-title
+                    +label-text("dropdown")
+                    span expanded
+                +dropdown({typeRoomsConfig: true})
+            .form-elements__dropdown-middle
+                .text-field-title
+                    +label-text("dropdown")
+                +dropdown({typeGuests: true})
+            .form-elements__dropdown-right
+                .text-field-title
+                    +label-text("dropdown")
+                +dropdown({typeGuests: true})
+                    
+        .form-elements__checkbox
+            .form-elements__checkbox-left.mr130
+                +text-field({text:"expandable checkbox list", isMedium: true, isDropdown: true, borderNone: true})
+                +dropdown({typeCheckboxList: true})
+            .form-elements__checkbox-middle
+                .form-elements__checkbox-title
+                    +label-text("rich Checkbox Buttons")
+                +checkbox({richCheckbox: true, text: "Широкий коридор", richCheckboxDesc: "Ширина коридоров в номере       не менее 91 см."})
+                +checkbox({richCheckbox: true, text: "Помощник для инвалидов", richCheckboxDesc: "На 1 этаже вас встретит специалист и проводит до номера."})
+            .form-elements__checkbox-right
+                .form-elements__checkbox-title
+                    +label-text("bullet list")
+                +checkbox({bulletList: true, text: "Нельзя с питомцами"})
+                +checkbox({bulletList: true, text: "Без вечеринок и мероприятий"})
+                +checkbox({bulletList: true, text: "Время прибытия — после 13:00, а выезд до 12:00"})
+
+        .form-elements__bottom-row
+            .form-elements__benefits.mr130
+                +benefits
+            .form-elements__users
+                +users
