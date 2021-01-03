@@ -4,6 +4,7 @@ select.forEach(i => {
     const selectInput = i.querySelector('.select__input')
     const backdrop = i.querySelector('.select__backdrop')
     const dropdown = i.querySelector('.select__dropdown')
+    // const textField = i.querySelector('.text-field')
     const input = i.querySelector('.input')
     const setInputWidth = i.querySelector('.set-input-width')
     const hiddenSpan = setInputWidth.nextElementSibling
@@ -11,6 +12,7 @@ select.forEach(i => {
     const guests = i.getAttribute('data-type') === 'guests'
     const roomsConfig = i.getAttribute('data-type') === 'rooms-config'
     const checkboxList = i.getAttribute('data-type') === 'checkbox-list'
+    const dates = i.getAttribute('data-type') === 'dates'
 
     const roomsConfigTemplate = `
                                 <ul class="select__list">
@@ -100,7 +102,13 @@ select.forEach(i => {
         input.closest('.text-field').classList.add('border-none')
         input.classList.add('border-none-text')
         dropdown.classList.add('border-none')
-    }
+    } 
+    
+    // else if (dates) {
+    //     textField.style.width = "150px"
+    //     input.value = 'ДД.ММ.ГГГГ'
+    //     dropdown.style.display = 'none'
+    // }
 
     selectInput.addEventListener('click', function() {
         i.classList.toggle('open')

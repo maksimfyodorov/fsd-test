@@ -1,0 +1,24 @@
+include ../../colors-type/type/widget-subtitle/widget-subtitle-div
+
+mixin calendar            
+            
+    .calendar
+        .calendar__month
+            .calendar__arrow-prev
+            .calendar__date
+                +widget-subtitle-div("Август")
+                +widget-subtitle-div("2019")
+            .calendar__arrow-next
+        .calendar__weekdays
+            div Пн
+            div Вт
+            div Ср
+            div Чт
+            div Пт
+            div Сб
+            div Вс
+        .calendar__days
+        .calendar__btns
+            .calendar__clear-btn очистить
+            .calendar__apply-btn применить
+

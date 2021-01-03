@@ -8,11 +8,16 @@ mixin dropdown(options)
         type += options.typeGuests ? "guests" : ""
         type += options.typeRoomsConfig ? "rooms-config" : ""
         type += options.typeCheckboxList ? "checkbox-list" : ""
+        //- type += options.typeDates ? "dates" : ""
+        var selectTitle = "select__title"
+        selectTitle += options.title ? "" : " none"
         var isTrue 
         options.typeRoomsConfig || options.typeCheckboxList ? isTrue = true : isTrue = false
         var list = ["Завтрак", "Письменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь", "Телевизор", "Шампунь"]
 
     .select(data-type=type)
+        div(class=selectTitle)
+            +label-text-span(options.title)
         .select__backdrop
         .select__input
             +text-field({text:"expandable checkbox list", isMedium: isTrue, isDropdown: true})

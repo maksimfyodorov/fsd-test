@@ -1,0 +1,21 @@
+include ../../colors-type/type/widget-title/widget-title-span
+include ../../form-elements/dropdown/dropdown
+
+mixin card__search-room
+
+    .card__search-room
+        .card__search-room__title
+            +widget-title-span("Найдём номера под ваши пожелания")
+        .card__search-room__dates
+            +text-field({text: "ДД.ММ.ГГГГ", isSmall: true, isDropdown: true, title: "прибытие"})
+            +text-field({text: "ДД.ММ.ГГГГ", isSmall: true, isDropdown: true, title: "выезд"})
+            .card__search-room__calendar
+                +calendar
+            .card__search-room__backdrop
+        .card__search-room__guests
+            +dropdown({title: "гости", typeGuests: true})
+        .card__search-room__btn
+            +button({text: "перейти к оплате", isLarge: true})
+
+
+

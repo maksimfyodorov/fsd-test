@@ -1,16 +1,23 @@
+include ../../colors-type/type/label-text/label-text-span
+
 mixin text-field(options)
     -
-        var wrapperClassName = "text-field"
-        wrapperClassName += options.isDropdown ? " dropdown" : ""
-        wrapperClassName += options.isSubscr ? " subscription" : ""
-        wrapperClassName += options.isHover ? " hover" : ""
-        wrapperClassName += options.isSmall ? " small" : ""
-        wrapperClassName += options.isMedium ? " medium" : ""
-        wrapperClassName += options.borderNone ? " border-none" : ""
+        var textField = "text-field"
+        textField += options.isDropdown ? " dropdown" : ""
+        textField += options.isSubscr ? " subscription" : ""
+        textField += options.isHover ? " hover" : ""
+        textField += options.isSmall ? " small" : ""
+        textField += options.isMedium ? " medium" : ""
+        textField += options.borderNone ? " border-none" : ""
+        var titleClassName = "text-field__title"
+        titleClassName += options.title ? "" : " none"
         var inputClassName = "input"
         inputClassName += options.borderNone ? " border-none-text" : ""
         
-    div(class = wrapperClassName)
-        input(class=inputClassName type="text" placeholder=options.placeholder value=options.text)
-        span.set-input-width
-        span ...
+    .text-field__wrap   
+        div(class=titleClassName)
+            +label-text-span(options.title)
+        div(class = textField)
+            input(class=inputClassName type="text" placeholder=options.placeholder value=options.text)
+            span.set-input-width
+            span ...

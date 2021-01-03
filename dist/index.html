@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="logo-wrapper"><img src="./img/logo.svg" alt=""></div>
-    <section class="colors-type">
+    <section class="colors-type none">
       <div class="container">
         <div class="colors-type__content">
           <div class="colors-type__colors">
@@ -72,7 +72,7 @@
         </div>
       </div>
     </section>
-    <section class="form-elements">
+    <section class="form-elements none">
       <div class="container">
         <div class="form-elements__top-row">
           <div class="form-elements__col-3">
@@ -80,32 +80,48 @@
                           <h3 class="label-text">Text Field</h3><span>Default</span>
             </div>
             <div class="text-field-wrapper">
-                          <div class="text-field">
-                            <input class="input" type="text" placeholder="Email"><span class="set-input-width"></span><span>...</span>
+                          <div class="text-field__wrap">  
+                            <div class="text-field__title none"><span class="label-text"></span>
+                            </div>
+                            <div class="text-field">
+                              <input class="input" type="text" placeholder="Email"><span class="set-input-width"></span><span>...</span>
+                            </div>
                           </div>
             </div>
             <div class="text-field-title">
                           <h3 class="label-text">Text Field</h3><span>Hover / Focus</span>
             </div>
             <div class="text-field-wrapper">
-                          <div class="text-field hover">
-                            <input class="input" type="text" placeholder="Email" value="This is pretty awesome"><span class="set-input-width"></span><span>...</span>
+                          <div class="text-field__wrap">  
+                            <div class="text-field__title none"><span class="label-text"></span>
+                            </div>
+                            <div class="text-field hover">
+                              <input class="input" type="text" placeholder="Email" value="This is pretty awesome"><span class="set-input-width"></span><span>...</span>
+                            </div>
                           </div>
             </div>
             <div class="text-field-title">
                           <h3 class="label-text">Dropdown</h3>
             </div>
             <div class="text-field-wrapper">
-                          <div class="text-field dropdown">
-                            <input class="input" type="text" value="Сколько гостей"><span class="set-input-width"></span><span>...</span>
+                          <div class="text-field__wrap">  
+                            <div class="text-field__title none"><span class="label-text"></span>
+                            </div>
+                            <div class="text-field dropdown">
+                              <input class="input" type="text" value="Сколько гостей"><span class="set-input-width"></span><span>...</span>
+                            </div>
                           </div>
             </div>
             <div class="text-field-title">
                           <h3 class="label-text">masked text field</h3>
             </div>
             <div class="masked-text-field-wrapper">
-                          <div class="text-field">
-                            <input class="input" type="text" placeholder="ДД.ММ.ГГГГ"><span class="set-input-width"></span><span>...</span>
+                          <div class="text-field__wrap">  
+                            <div class="text-field__title none"><span class="label-text"></span>
+                            </div>
+                            <div class="text-field">
+                              <input class="input" type="text" placeholder="ДД.ММ.ГГГГ"><span class="set-input-width"></span><span>...</span>
+                            </div>
                           </div>
             </div>
             <div class="date-dropdown-wrapper">
@@ -113,16 +129,24 @@
                 <div class="text-field-title">
                               <h3 class="label-text">date Dropdown</h3>
                 </div>
-                            <div class="text-field dropdown small">
-                              <input class="input" type="text" value="ДД.ММ.ГГГГ"><span class="set-input-width"></span><span>...</span>
+                            <div class="text-field__wrap">  
+                              <div class="text-field__title none"><span class="label-text"></span>
+                              </div>
+                              <div class="text-field dropdown small">
+                                <input class="input" type="text" value="ДД.ММ.ГГГГ"><span class="set-input-width"></span><span>...</span>
+                              </div>
                             </div>
               </div>
               <div class="date-dropdown-item">
                 <div class="text-field-title">
                               <h3 class="label-text">date Dropdown</h3>
                 </div>
-                            <div class="text-field dropdown small">
-                              <input class="input" type="text" value="19.08.2019"><span class="set-input-width"></span><span>...</span>
+                            <div class="text-field__wrap">  
+                              <div class="text-field__title none"><span class="label-text"></span>
+                              </div>
+                              <div class="text-field dropdown small">
+                                <input class="input" type="text" value="19.08.2019"><span class="set-input-width"></span><span>...</span>
+                              </div>
                             </div>
               </div>
             </div>
@@ -130,15 +154,23 @@
               <div class="text-field-title">
                             <h3 class="label-text">filter date dropdown</h3>
               </div>
-                          <div class="text-field dropdown medium">
-                            <input class="input" type="text" value="19 авг - 23 авг"><span class="set-input-width"></span><span>...</span>
+                          <div class="text-field__wrap">  
+                            <div class="text-field__title none"><span class="label-text"></span>
+                            </div>
+                            <div class="text-field dropdown medium">
+                              <input class="input" type="text" value="19 авг - 23 авг"><span class="set-input-width"></span><span>...</span>
+                            </div>
                           </div>
             </div>
             <div class="text-field-title">
                           <h3 class="label-text">subscription text field</h3>
             </div>
-                        <div class="text-field subscription medium">
-                          <input class="input" type="text" placeholder="Email"><span class="set-input-width"></span><span>...</span>
+                        <div class="text-field__wrap">  
+                          <div class="text-field__title none"><span class="label-text"></span>
+                          </div>
+                          <div class="text-field subscription medium">
+                            <input class="input" type="text" placeholder="Email"><span class="set-input-width"></span><span>...</span>
+                          </div>
                         </div>
           </div>
           <div class="form-elements__col-3">
@@ -411,18 +443,28 @@
                           <h3 class="label-text">dropdown</h3><span>Default</span>
             </div>
             <div class="text-field-wrapper">
-                          <div class="text-field dropdown medium">
-                            <input class="input" type="text" value="2 спальни, 2 кровати..."><span class="set-input-width"></span><span>...</span>
+                          <div class="text-field__wrap">  
+                            <div class="text-field__title none"><span class="label-text"></span>
+                            </div>
+                            <div class="text-field dropdown medium">
+                              <input class="input" type="text" value="2 спальни, 2 кровати..."><span class="set-input-width"></span><span>...</span>
+                            </div>
                           </div>
             </div>
             <div class="text-field-title">
                           <h3 class="label-text">dropdown</h3><span>expanded</span>
             </div>
                 <div class="select" data-type="rooms-config">
+                  <div class="select__title none"><span class="label-text"></span>
+                  </div>
                   <div class="select__backdrop"></div>
                   <div class="select__input">
-                                <div class="text-field dropdown medium">
-                                  <input class="input" type="text" value="expandable checkbox list"><span class="set-input-width"></span><span>...</span>
+                                <div class="text-field__wrap">  
+                                  <div class="text-field__title none"><span class="label-text"></span>
+                                  </div>
+                                  <div class="text-field dropdown medium">
+                                    <input class="input" type="text" value="expandable checkbox list"><span class="set-input-width"></span><span>...</span>
+                                  </div>
                                 </div>
                   </div>
                   <div class="select__dropdown">
@@ -482,10 +524,16 @@
                           <h3 class="label-text">dropdown</h3>
             </div>
                 <div class="select" data-type="guests">
+                  <div class="select__title none"><span class="label-text"></span>
+                  </div>
                   <div class="select__backdrop"></div>
                   <div class="select__input">
-                                <div class="text-field dropdown">
-                                  <input class="input" type="text" value="expandable checkbox list"><span class="set-input-width"></span><span>...</span>
+                                <div class="text-field__wrap">  
+                                  <div class="text-field__title none"><span class="label-text"></span>
+                                  </div>
+                                  <div class="text-field dropdown">
+                                    <input class="input" type="text" value="expandable checkbox list"><span class="set-input-width"></span><span>...</span>
+                                  </div>
                                 </div>
                   </div>
                   <div class="select__dropdown">
@@ -545,10 +593,16 @@
                           <h3 class="label-text">dropdown</h3>
             </div>
                 <div class="select" data-type="guests">
+                  <div class="select__title none"><span class="label-text"></span>
+                  </div>
                   <div class="select__backdrop"></div>
                   <div class="select__input">
-                                <div class="text-field dropdown">
-                                  <input class="input" type="text" value="expandable checkbox list"><span class="set-input-width"></span><span>...</span>
+                                <div class="text-field__wrap">  
+                                  <div class="text-field__title none"><span class="label-text"></span>
+                                  </div>
+                                  <div class="text-field dropdown">
+                                    <input class="input" type="text" value="expandable checkbox list"><span class="set-input-width"></span><span>...</span>
+                                  </div>
                                 </div>
                   </div>
                   <div class="select__dropdown">
@@ -606,14 +660,24 @@
         </div>
         <div class="form-elements__checkbox">
           <div class="form-elements__checkbox-left mr130">
-                        <div class="text-field dropdown medium border-none">
-                          <input class="input border-none-text" type="text" value="expandable checkbox list"><span class="set-input-width"></span><span>...</span>
+                        <div class="text-field__wrap">  
+                          <div class="text-field__title none"><span class="label-text"></span>
+                          </div>
+                          <div class="text-field dropdown medium border-none">
+                            <input class="input border-none-text" type="text" value="expandable checkbox list"><span class="set-input-width"></span><span>...</span>
+                          </div>
                         </div>
                 <div class="select" data-type="checkbox-list">
+                  <div class="select__title none"><span class="label-text"></span>
+                  </div>
                   <div class="select__backdrop"></div>
                   <div class="select__input">
-                                <div class="text-field dropdown medium">
-                                  <input class="input" type="text" value="expandable checkbox list"><span class="set-input-width"></span><span>...</span>
+                                <div class="text-field__wrap">  
+                                  <div class="text-field__title none"><span class="label-text"></span>
+                                  </div>
+                                  <div class="text-field dropdown medium">
+                                    <input class="input" type="text" value="expandable checkbox list"><span class="set-input-width"></span><span>...</span>
+                                  </div>
                                 </div>
                   </div>
                   <div class="select__dropdown">
@@ -751,6 +815,134 @@
                   </div>
                 </div>
           </div>
+        </div>
+      </div>
+    </section>
+    <section class="cards">
+      <div class="container">
+        <div class="cards__wrap">
+          <div class="cards__col-3">
+                <div class="card__search-room">
+                  <div class="card__search-room__title"><span class="widget-title">Найдём номера под ваши пожелания</span>
+                  </div>
+                  <div class="card__search-room__dates">
+                        <div class="text-field__wrap">  
+                          <div class="text-field__title"><span class="label-text">прибытие</span>
+                          </div>
+                          <div class="text-field dropdown small">
+                            <input class="input" type="text" value="ДД.ММ.ГГГГ"><span class="set-input-width"></span><span>...</span>
+                          </div>
+                        </div>
+                        <div class="text-field__wrap">  
+                          <div class="text-field__title"><span class="label-text">выезд</span>
+                          </div>
+                          <div class="text-field dropdown small">
+                            <input class="input" type="text" value="ДД.ММ.ГГГГ"><span class="set-input-width"></span><span>...</span>
+                          </div>
+                        </div>
+                    <div class="card__search-room__calendar">
+                          <div class="calendar">
+                            <div class="calendar__month">
+                              <div class="calendar__arrow-prev"></div>
+                              <div class="calendar__date">
+                                    <div class="widget-subtitle">Август</div>
+                                    <div class="widget-subtitle">2019</div>
+                              </div>
+                              <div class="calendar__arrow-next"></div>
+                            </div>
+                            <div class="calendar__weekdays">
+                              <div>Пн</div>
+                              <div>Вт</div>
+                              <div>Ср</div>
+                              <div>Чт</div>
+                              <div>Пт</div>
+                              <div>Сб</div>
+                              <div>Вс</div>
+                            </div>
+                            <div class="calendar__days"></div>
+                            <div class="calendar__btns">
+                              <div class="calendar__clear-btn">очистить</div>
+                              <div class="calendar__apply-btn">применить</div>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="card__search-room__backdrop"></div>
+                  </div>
+                  <div class="card__search-room__guests">
+                        <div class="select" data-type="guests">
+                          <div class="select__title"><span class="label-text">гости</span>
+                          </div>
+                          <div class="select__backdrop"></div>
+                          <div class="select__input">
+                                <div class="text-field__wrap">  
+                                  <div class="text-field__title none"><span class="label-text"></span>
+                                  </div>
+                                  <div class="text-field dropdown">
+                                    <input class="input" type="text" value="expandable checkbox list"><span class="set-input-width"></span><span>...</span>
+                                  </div>
+                                </div>
+                          </div>
+                          <div class="select__dropdown">
+                                <label class="label-checkbox">
+                                  <input class="real-checkbox" type="checkbox">
+                                  <div class="custom-checkbox"></div>
+                                  <div class="checkbox-text">Завтрак</div>
+                                  <div class="rich-checkbox-desc"></div>
+                                </label>
+                                <label class="label-checkbox">
+                                  <input class="real-checkbox" type="checkbox">
+                                  <div class="custom-checkbox"></div>
+                                  <div class="checkbox-text">Письменный стол</div>
+                                  <div class="rich-checkbox-desc"></div>
+                                </label>
+                                <label class="label-checkbox">
+                                  <input class="real-checkbox" type="checkbox">
+                                  <div class="custom-checkbox"></div>
+                                  <div class="checkbox-text">Стул для кормления</div>
+                                  <div class="rich-checkbox-desc"></div>
+                                </label>
+                                <label class="label-checkbox">
+                                  <input class="real-checkbox" type="checkbox">
+                                  <div class="custom-checkbox"></div>
+                                  <div class="checkbox-text">Кроватка</div>
+                                  <div class="rich-checkbox-desc"></div>
+                                </label>
+                                <label class="label-checkbox">
+                                  <input class="real-checkbox" type="checkbox">
+                                  <div class="custom-checkbox"></div>
+                                  <div class="checkbox-text">Телевизор</div>
+                                  <div class="rich-checkbox-desc"></div>
+                                </label>
+                                <label class="label-checkbox">
+                                  <input class="real-checkbox" type="checkbox">
+                                  <div class="custom-checkbox"></div>
+                                  <div class="checkbox-text">Шампунь</div>
+                                  <div class="rich-checkbox-desc"></div>
+                                </label>
+                                <label class="label-checkbox">
+                                  <input class="real-checkbox" type="checkbox">
+                                  <div class="custom-checkbox"></div>
+                                  <div class="checkbox-text">Телевизор</div>
+                                  <div class="rich-checkbox-desc"></div>
+                                </label>
+                                <label class="label-checkbox">
+                                  <input class="real-checkbox" type="checkbox">
+                                  <div class="custom-checkbox"></div>
+                                  <div class="checkbox-text">Шампунь</div>
+                                  <div class="rich-checkbox-desc"></div>
+                                </label>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="card__search-room__btn">
+                                <button class="button bg large" type="submit">перейти к оплате
+                                  <div class="btn-arrow"></div>
+                                </button>
+                  </div>
+                </div>
+          </div>
+          <div class="cards__col-3 mr130"></div>
+          <div class="cards__col-3"></div>
         </div>
       </div>
     </section>
