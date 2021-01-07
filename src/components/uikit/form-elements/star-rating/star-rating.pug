@@ -1,10 +1,11 @@
 include ../star/star
 
 mixin star-rating(options)
-    -
-        var number = options.ratingNumber
+    //- -
+        //- var number = options.ratingNumber
+        //- var starsRated = options.starsRated
 
-    .rating(data-rating=number)
+    .rating(data-stars-rated=options.starsRated data-rating=options.ratingNumber)
         .rating-item(data-rate="1")
             +star({})
         .rating-item(data-rate="2")

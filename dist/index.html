@@ -72,7 +72,7 @@
         </div>
       </div>
     </section>
-    <section class="form-elements none">
+    <section class="form-elements">
       <div class="container">
         <div class="form-elements__top-row">
           <div class="form-elements__col-3">
@@ -245,7 +245,7 @@
                             <h3 class="label-text">rate button</h3>
               </div>
               <div class="item__star-rating-wrapper">   
-                            <div class="rating" data-rating="1">
+                            <div class="rating" data-stars-rated="4">
                               <div class="rating-item" data-rate="1">
                                             <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                               <path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"></path>
@@ -308,7 +308,7 @@
                               </div>
                             </div>
               </div>
-                          <div class="rating" data-rating="2">
+                          <div class="rating" data-stars-rated="0">
                             <div class="rating-item" data-rate="1">
                                           <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"></path>
@@ -822,26 +822,29 @@
       <div class="container">
         <div class="cards__wrap">
           <div class="cards__col-3">
-                <div class="card__search-room">
+                <div class="card card__search-room">
                   <div class="card__search-room__title"><span class="widget-title">Найдём номера под ваши пожелания</span>
                   </div>
-                  <div class="card__search-room__dates">
-                        <div class="text-field__wrap">  
-                          <div class="text-field__title"><span class="label-text">прибытие</span>
+                  <div class="card__search-room__calendar">
+                        <div class="calendar__wrap">
+                          <div class="calendar__dates-of-stay">
+                                <div class="text-field__wrap">  
+                                  <div class="text-field__title"><span class="label-text">прибытие</span>
+                                  </div>
+                                  <div class="text-field dropdown small">
+                                    <input class="input" type="text" value="ДД.ММ.ГГГГ"><span class="set-input-width"></span><span>...</span>
+                                  </div>
+                                </div>
+                                <div class="text-field__wrap">  
+                                  <div class="text-field__title"><span class="label-text">выезд</span>
+                                  </div>
+                                  <div class="text-field dropdown small">
+                                    <input class="input" type="text" value="ДД.ММ.ГГГГ"><span class="set-input-width"></span><span>...</span>
+                                  </div>
+                                </div>
                           </div>
-                          <div class="text-field dropdown small">
-                            <input class="input" type="text" value="ДД.ММ.ГГГГ"><span class="set-input-width"></span><span>...</span>
-                          </div>
-                        </div>
-                        <div class="text-field__wrap">  
-                          <div class="text-field__title"><span class="label-text">выезд</span>
-                          </div>
-                          <div class="text-field dropdown small">
-                            <input class="input" type="text" value="ДД.ММ.ГГГГ"><span class="set-input-width"></span><span>...</span>
-                          </div>
-                        </div>
-                    <div class="card__search-room__calendar">
                           <div class="calendar">
+                            <div class="calendar__backdrop"></div>
                             <div class="calendar__month">
                               <div class="calendar__arrow-prev"></div>
                               <div class="calendar__date">
@@ -865,8 +868,7 @@
                               <div class="calendar__apply-btn">применить</div>
                             </div>
                           </div>
-                    </div>
-                    <div class="card__search-room__backdrop"></div>
+                        </div>
                   </div>
                   <div class="card__search-room__guests">
                         <div class="select" data-type="guests">
@@ -940,9 +942,451 @@
                                 </button>
                   </div>
                 </div>
+                <div class="card card__account-registration">
+                  <div class="card__account-registration__title"><span class="widget-title">Регистрация аккаунта</span>
+                  </div>
+                  <div class="card__account-registration__user-name">
+                        <div class="text-field__wrap">  
+                          <div class="text-field__title none"><span class="label-text"></span>
+                          </div>
+                          <div class="text-field">
+                            <input class="input" type="text" placeholder="Имя"><span class="set-input-width"></span><span>...</span>
+                          </div>
+                        </div>
+                        <div class="text-field__wrap">  
+                          <div class="text-field__title none"><span class="label-text"></span>
+                          </div>
+                          <div class="text-field">
+                            <input class="input" type="text" placeholder="Фамилия"><span class="set-input-width"></span><span>...</span>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="card__account-registration__radio-btns">
+                                <label class="label-radio">
+                                  <input class="real-radio" type="radio" name="category"><span class="custom-radio"></span><span class="radio-text">Мужчина</span>
+                                </label>
+                                <label class="label-radio">
+                                  <input class="real-radio" type="radio" name="category"><span class="custom-radio"></span><span class="radio-text">Женщина</span>
+                                </label>
+                  </div>
+                  <div class="card__account-registration__date-of-birth">
+                        <div class="text-field__wrap">  
+                          <div class="text-field__title"><span class="label-text">дата рождения</span>
+                          </div>
+                          <div class="text-field">
+                            <input class="input" type="text" placeholder="ДД.ММ.ГГГГ"><span class="set-input-width"></span><span>...</span>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="card__account-registration__login-data">
+                        <div class="text-field__wrap">  
+                          <div class="text-field__title"><span class="label-text">данные для входа в сервис</span>
+                          </div>
+                          <div class="text-field">
+                            <input class="input" type="text" placeholder="Email"><span class="set-input-width"></span><span>...</span>
+                          </div>
+                        </div>
+                        <div class="text-field__wrap">  
+                          <div class="text-field__title none"><span class="label-text"></span>
+                          </div>
+                          <div class="text-field">
+                            <input class="input" type="text" placeholder="Пароль"><span class="set-input-width"></span><span>...</span>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="card__account-registration__toggle-btn">
+                                <div class="toggle-btn-wrapper">
+                                  <div class="toggle-btn"> </div><span>Получать спецпредложения</span>
+                                </div>
+                  </div>
+                  <div class="card__account-registration__btn">
+                                <button class="button bg large" type="submit">перейти к оплате
+                                  <div class="btn-arrow"></div>
+                                </button>
+                  </div>
+                  <div class="card__account-registration__account-exist"><span>Уже есть аккаунт на Toxin</span>
+                                <button class="button" type="submit">войти
+                                  <div class="btn-arrow none"></div>
+                                </button>
+                  </div>
+                </div>
           </div>
-          <div class="cards__col-3 mr130"></div>
-          <div class="cards__col-3"></div>
+          <div class="cards__col-3">
+                <div class="card card__booking">
+                  <div class="card__booking__room-number-and-price">
+                    <div class="card__booking__room-number"><span>№ </span><span>888</span><span>люкс</span></div>
+                    <div class="card__booking__price">9 990&#8381; <span>в сутки</span></div>
+                  </div>
+                  <div class="card__booking__calendar">
+                        <div class="calendar__wrap">
+                          <div class="calendar__dates-of-stay">
+                                <div class="text-field__wrap">  
+                                  <div class="text-field__title"><span class="label-text">прибытие</span>
+                                  </div>
+                                  <div class="text-field dropdown small">
+                                    <input class="input" type="text" value="ДД.ММ.ГГГГ"><span class="set-input-width"></span><span>...</span>
+                                  </div>
+                                </div>
+                                <div class="text-field__wrap">  
+                                  <div class="text-field__title"><span class="label-text">выезд</span>
+                                  </div>
+                                  <div class="text-field dropdown small">
+                                    <input class="input" type="text" value="ДД.ММ.ГГГГ"><span class="set-input-width"></span><span>...</span>
+                                  </div>
+                                </div>
+                          </div>
+                          <div class="calendar">
+                            <div class="calendar__backdrop"></div>
+                            <div class="calendar__month">
+                              <div class="calendar__arrow-prev"></div>
+                              <div class="calendar__date">
+                                    <div class="widget-subtitle">Август</div>
+                                    <div class="widget-subtitle">2019</div>
+                              </div>
+                              <div class="calendar__arrow-next"></div>
+                            </div>
+                            <div class="calendar__weekdays">
+                              <div>Пн</div>
+                              <div>Вт</div>
+                              <div>Ср</div>
+                              <div>Чт</div>
+                              <div>Пт</div>
+                              <div>Сб</div>
+                              <div>Вс</div>
+                            </div>
+                            <div class="calendar__days"></div>
+                            <div class="calendar__btns">
+                              <div class="calendar__clear-btn">очистить</div>
+                              <div class="calendar__apply-btn">применить</div>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="card__booking__guests">
+                        <div class="select" data-type="guests">
+                          <div class="select__title"><span class="label-text">гости</span>
+                          </div>
+                          <div class="select__backdrop"></div>
+                          <div class="select__input">
+                                <div class="text-field__wrap">  
+                                  <div class="text-field__title none"><span class="label-text"></span>
+                                  </div>
+                                  <div class="text-field dropdown">
+                                    <input class="input" type="text" value="expandable checkbox list"><span class="set-input-width"></span><span>...</span>
+                                  </div>
+                                </div>
+                          </div>
+                          <div class="select__dropdown">
+                                <label class="label-checkbox">
+                                  <input class="real-checkbox" type="checkbox">
+                                  <div class="custom-checkbox"></div>
+                                  <div class="checkbox-text">Завтрак</div>
+                                  <div class="rich-checkbox-desc"></div>
+                                </label>
+                                <label class="label-checkbox">
+                                  <input class="real-checkbox" type="checkbox">
+                                  <div class="custom-checkbox"></div>
+                                  <div class="checkbox-text">Письменный стол</div>
+                                  <div class="rich-checkbox-desc"></div>
+                                </label>
+                                <label class="label-checkbox">
+                                  <input class="real-checkbox" type="checkbox">
+                                  <div class="custom-checkbox"></div>
+                                  <div class="checkbox-text">Стул для кормления</div>
+                                  <div class="rich-checkbox-desc"></div>
+                                </label>
+                                <label class="label-checkbox">
+                                  <input class="real-checkbox" type="checkbox">
+                                  <div class="custom-checkbox"></div>
+                                  <div class="checkbox-text">Кроватка</div>
+                                  <div class="rich-checkbox-desc"></div>
+                                </label>
+                                <label class="label-checkbox">
+                                  <input class="real-checkbox" type="checkbox">
+                                  <div class="custom-checkbox"></div>
+                                  <div class="checkbox-text">Телевизор</div>
+                                  <div class="rich-checkbox-desc"></div>
+                                </label>
+                                <label class="label-checkbox">
+                                  <input class="real-checkbox" type="checkbox">
+                                  <div class="custom-checkbox"></div>
+                                  <div class="checkbox-text">Шампунь</div>
+                                  <div class="rich-checkbox-desc"></div>
+                                </label>
+                                <label class="label-checkbox">
+                                  <input class="real-checkbox" type="checkbox">
+                                  <div class="custom-checkbox"></div>
+                                  <div class="checkbox-text">Телевизор</div>
+                                  <div class="rich-checkbox-desc"></div>
+                                </label>
+                                <label class="label-checkbox">
+                                  <input class="real-checkbox" type="checkbox">
+                                  <div class="custom-checkbox"></div>
+                                  <div class="checkbox-text">Шампунь</div>
+                                  <div class="rich-checkbox-desc"></div>
+                                </label>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="card__booking__total-price"><span>9 990&#8381; х 4 суток</span><span>39 960&#8381;</span></div>
+                  <div class="card__booking__fee">
+                    <div>Сбор за услуги: скидка 2 179&#8381;<span>i</span></div>
+                    <div>0&#8381;</div>
+                  </div>
+                  <div class="card__booking__additional-fee">
+                    <div>Сбор за дополнительные услуги<span>i</span></div>
+                    <div>300&#8381;</div>
+                  </div>
+                  <div class="card__booking__total"><span>Итого</span><span>38 081&#8381;</span></div>
+                  <div class="card__booking__btn">
+                                <button class="button bg large" type="submit">забронировать
+                                  <div class="btn-arrow"></div>
+                                </button>
+                  </div>
+                </div>
+                <div class="card card__login">
+                  <div class="card__login__title"><span class="widget-title">Войти</span>
+                  </div>
+                  <div class="card__login__inputs">
+                        <div class="text-field__wrap">  
+                          <div class="text-field__title none"><span class="label-text"></span>
+                          </div>
+                          <div class="text-field">
+                            <input class="input" type="text" placeholder="Email"><span class="set-input-width"></span><span>...</span>
+                          </div>
+                        </div>
+                        <div class="text-field__wrap">  
+                          <div class="text-field__title none"><span class="label-text"></span>
+                          </div>
+                          <div class="text-field">
+                            <input class="input" type="text" placeholder="Пароль"><span class="set-input-width"></span><span>...</span>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="card__login__btn">
+                                <button class="button bg large" type="submit">войти
+                                  <div class="btn-arrow"></div>
+                                </button>
+                  </div>
+                  <div class="card__login"></div>
+                  <div class="card__login__no-account"><span>Нет аккаунта на Toxin?</span>
+                                <button class="button" type="submit">создать
+                                  <div class="btn-arrow none"></div>
+                                </button>
+                  </div>
+                </div>
+          </div>
+          <div class="cards__col-3">
+                <div class="calendar__wrap">
+                  <div class="calendar__dates-of-stay">
+                        <div class="text-field__wrap">  
+                          <div class="text-field__title"><span class="label-text">прибытие</span>
+                          </div>
+                          <div class="text-field dropdown small">
+                            <input class="input" type="text" value="ДД.ММ.ГГГГ"><span class="set-input-width"></span><span>...</span>
+                          </div>
+                        </div>
+                        <div class="text-field__wrap">  
+                          <div class="text-field__title"><span class="label-text">выезд</span>
+                          </div>
+                          <div class="text-field dropdown small">
+                            <input class="input" type="text" value="ДД.ММ.ГГГГ"><span class="set-input-width"></span><span>...</span>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="calendar">
+                    <div class="calendar__backdrop"></div>
+                    <div class="calendar__month">
+                      <div class="calendar__arrow-prev"></div>
+                      <div class="calendar__date">
+                            <div class="widget-subtitle">Август</div>
+                            <div class="widget-subtitle">2019</div>
+                      </div>
+                      <div class="calendar__arrow-next"></div>
+                    </div>
+                    <div class="calendar__weekdays">
+                      <div>Пн</div>
+                      <div>Вт</div>
+                      <div>Ср</div>
+                      <div>Чт</div>
+                      <div>Пт</div>
+                      <div>Сб</div>
+                      <div>Вс</div>
+                    </div>
+                    <div class="calendar__days"></div>
+                    <div class="calendar__btns">
+                      <div class="calendar__clear-btn">очистить</div>
+                      <div class="calendar__apply-btn">применить</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__rooms-carousel"> 
+                  <div class="card__rooms-carousel__img">
+                    <div class="card__rooms-carousel__arrow-left"></div>
+                    <div class="card__rooms-carousel__arrow-right"></div>
+                    <div class="card__rooms-carousel__pagination">
+                      <div class="active"></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div><img src="./img/uikit/cards/room-1.jpg">
+                  </div>
+                  <div class="card__rooms-carousel__content">
+                    <div class="card__rooms-carousel__room-number-and-price">
+                      <div class="card__rooms-carousel__room-number"><span>№ </span><span>888</span><span>люкс</span></div>
+                      <div class="card__rooms-carousel__price"><span>9 990₽ </span><span>в сутки</span></div>
+                    </div>
+                    <div class="card__rooms-carousel__reviews">
+                                  <div class="rating" data-stars-rated="5">
+                                    <div class="rating-item" data-rate="1">
+                                                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"></path>
+                                                    <path class="star-fill" d="M10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25Z" fill="url(#paint0_linear)"></path>
+                                                    <defs>
+                                                      <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+                                                        <stop stop-color="#BC9CFF"></stop>
+                                                        <stop offset="1" stop-color="#8BA4F9"></stop>
+                                                      </linearGradient>
+                                                    </defs>
+                                                  </svg>
+                                    </div>
+                                    <div class="rating-item" data-rate="2">
+                                                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"></path>
+                                                    <path class="star-fill" d="M10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25Z" fill="url(#paint0_linear)"></path>
+                                                    <defs>
+                                                      <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+                                                        <stop stop-color="#BC9CFF"></stop>
+                                                        <stop offset="1" stop-color="#8BA4F9"></stop>
+                                                      </linearGradient>
+                                                    </defs>
+                                                  </svg>
+                                    </div>
+                                    <div class="rating-item" data-rate="3">
+                                                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"></path>
+                                                    <path class="star-fill" d="M10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25Z" fill="url(#paint0_linear)"></path>
+                                                    <defs>
+                                                      <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+                                                        <stop stop-color="#BC9CFF"></stop>
+                                                        <stop offset="1" stop-color="#8BA4F9"></stop>
+                                                      </linearGradient>
+                                                    </defs>
+                                                  </svg>
+                                    </div>
+                                    <div class="rating-item" data-rate="4">
+                                                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"></path>
+                                                    <path class="star-fill" d="M10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25Z" fill="url(#paint0_linear)"></path>
+                                                    <defs>
+                                                      <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+                                                        <stop stop-color="#BC9CFF"></stop>
+                                                        <stop offset="1" stop-color="#8BA4F9"></stop>
+                                                      </linearGradient>
+                                                    </defs>
+                                                  </svg>
+                                    </div>
+                                    <div class="rating-item" data-rate="5">
+                                                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"></path>
+                                                    <path class="star-fill" d="M10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25Z" fill="url(#paint0_linear)"></path>
+                                                    <defs>
+                                                      <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+                                                        <stop stop-color="#BC9CFF"></stop>
+                                                        <stop offset="1" stop-color="#8BA4F9"></stop>
+                                                      </linearGradient>
+                                                    </defs>
+                                                  </svg>
+                                    </div>
+                                  </div>
+                      <div>145 <span>Отзывов</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__rooms-carousel"> 
+                  <div class="card__rooms-carousel__img">
+                    <div class="card__rooms-carousel__arrow-left none"></div>
+                    <div class="card__rooms-carousel__arrow-right none"></div>
+                    <div class="card__rooms-carousel__pagination">
+                      <div class="active"></div>
+                      <div></div>
+                      <div></div>
+                      <div></div>
+                    </div><img src="./img/uikit/cards/room-2.jpg">
+                  </div>
+                  <div class="card__rooms-carousel__content">
+                    <div class="card__rooms-carousel__room-number-and-price">
+                      <div class="card__rooms-carousel__room-number"><span>№ </span><span>840</span><span class="none"></span></div>
+                      <div class="card__rooms-carousel__price"><span>9 900₽ </span><span>в сутки</span></div>
+                    </div>
+                    <div class="card__rooms-carousel__reviews">
+                                  <div class="rating" data-stars-rated="4">
+                                    <div class="rating-item" data-rate="1">
+                                                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"></path>
+                                                    <path class="star-fill" d="M10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25Z" fill="url(#paint0_linear)"></path>
+                                                    <defs>
+                                                      <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+                                                        <stop stop-color="#BC9CFF"></stop>
+                                                        <stop offset="1" stop-color="#8BA4F9"></stop>
+                                                      </linearGradient>
+                                                    </defs>
+                                                  </svg>
+                                    </div>
+                                    <div class="rating-item" data-rate="2">
+                                                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"></path>
+                                                    <path class="star-fill" d="M10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25Z" fill="url(#paint0_linear)"></path>
+                                                    <defs>
+                                                      <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+                                                        <stop stop-color="#BC9CFF"></stop>
+                                                        <stop offset="1" stop-color="#8BA4F9"></stop>
+                                                      </linearGradient>
+                                                    </defs>
+                                                  </svg>
+                                    </div>
+                                    <div class="rating-item" data-rate="3">
+                                                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"></path>
+                                                    <path class="star-fill" d="M10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25Z" fill="url(#paint0_linear)"></path>
+                                                    <defs>
+                                                      <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+                                                        <stop stop-color="#BC9CFF"></stop>
+                                                        <stop offset="1" stop-color="#8BA4F9"></stop>
+                                                      </linearGradient>
+                                                    </defs>
+                                                  </svg>
+                                    </div>
+                                    <div class="rating-item" data-rate="4">
+                                                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"></path>
+                                                    <path class="star-fill" d="M10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25Z" fill="url(#paint0_linear)"></path>
+                                                    <defs>
+                                                      <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+                                                        <stop stop-color="#BC9CFF"></stop>
+                                                        <stop offset="1" stop-color="#8BA4F9"></stop>
+                                                      </linearGradient>
+                                                    </defs>
+                                                  </svg>
+                                    </div>
+                                    <div class="rating-item" data-rate="5">
+                                                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M10 13.4219L13.75 15.6719L12.7656 11.4062L16.0938 8.5L11.6875 8.125L10 4.09375L8.3125 8.125L3.90625 8.5L7.23438 11.4062L6.25 15.6719L10 13.4219ZM19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438Z" fill="url(#paint0_linear)"></path>
+                                                    <path class="star-fill" d="M10 15.25L3.8125 19L5.45312 11.9688L0.015625 7.23438L7.1875 6.625L10 0.015625L12.8125 6.625L19.9844 7.23438L14.5469 11.9688L16.1875 19L10 15.25Z" fill="url(#paint0_linear)"></path>
+                                                    <defs>
+                                                      <linearGradient id="paint0_linear" x1="10" y1="-2" x2="10" y2="22" gradientUnits="userSpaceOnUse">
+                                                        <stop stop-color="#BC9CFF"></stop>
+                                                        <stop offset="1" stop-color="#8BA4F9"></stop>
+                                                      </linearGradient>
+                                                    </defs>
+                                                  </svg>
+                                    </div>
+                                  </div>
+                      <div>65 <span>Отзывов</span></div>
+                    </div>
+                  </div>
+                </div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,51 +1,10 @@
 .card__search-room {
-    width: 380px;
-    padding: 40px 29px 30px;
-
-    background: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-
     &__title {
         margin-bottom: 20px;
     }
 
-    &__dates {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
-        position: relative;
-
-        &.calendar__open {
-            .card__search-room__calendar, .card__search-room__backdrop {
-                display: block;
-            }
-
-            .dropdown::after {
-                border: none;
-                border-top: 2px solid var(--dark-shade-50);
-                border-right: 2px solid var(--dark-shade-50);
-            }
-        }
-    }
-
     &__calendar {
-        display: none;
-        position: absolute;
-        top: 72px;
-        z-index: 3;
-    }
-
-    &__backdrop {
-        position: fixed;
-        display: none;
-        z-index: 0;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        background: transparent;
+        margin-bottom: 20px;
     }
 
     &__guests {

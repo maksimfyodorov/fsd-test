@@ -1,10 +1,48 @@
+.calendar__wrap {
+    position: relative;
+    width: 320px;
+    z-index: 3;
+
+    &.calendar__open {
+        .calendar, .calendar__backdrop {
+            display: block;
+        }
+
+        .dropdown::after {
+            border: none;
+            border-top: 2px solid var(--dark-shade-50);
+            border-right: 2px solid var(--dark-shade-50);
+        }
+    }
+}
+
+.calendar__dates-of-stay {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
 .calendar {
+    display: none;
+    position: absolute;
+    top: 72px;
     width: 320px;
     padding: 19px;  
     background: #FFFFFF;
     border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+
+    &__backdrop {
+        position: fixed;
+        display: none;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: transparent;
+    }
 
     &__month {
         display: flex;
@@ -13,8 +51,11 @@
 
     &__date {
         display: flex;
-        flex-direction: column;
         align-items: center;
+
+        & div:first-child {
+            margin-right: 7px;
+        }
     }
 
     &__arrow-prev, &__arrow-next {
@@ -71,7 +112,6 @@
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 20px;
-        // cursor: pointer;
 
         & .calendar__next-date, .calendar__prev-date {
             color: var(--dark-shade-25);
@@ -99,38 +139,6 @@
             &.selected-date, &.selected-date-1, &.selected-date-2 {
                 background: var(--pur-grad);
             }
-
-            // &::after {
-            //     position: absolute;
-            //     content: '';
-            //     display: block;
-            //     width: 40px;
-            //     height: 40px;
-            //     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-            //     opacity: 0.25;
-            //     z-index: -1;
-            // }
-
-
-
-            // background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-            // opacity: 0.25;
-
-            // &:hover:not(.current-date) {
-            //     font-weight: 700;
-            //     color: #FFFFFF !important;
-            //     position: relative;
-
-            //     &::after {
-            //         content: "";
-            //         position: absolute;
-            //         width: 40px;
-            //         height: 40px;
-            //         border-radius: 22px;
-            //         background: var(--pur-grad);
-            //         z-index: -1; 
-            //     }
-            // }
         }
     }
 
@@ -168,54 +176,4 @@
     left: unset;
     right: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .current-date, .selected-date {
-//     font-weight: 700;
-//     color: #FFFFFF !important;
-//     position: relative;
-
-//     &::after {
-//         content: "";
-//         position: absolute;
-//         width: 40px;
-//         height: 40px;
-//         border-radius: 22px;
-//         background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-//         z-index: -1;
-//     }
-// }
-
-// .selected-date::after {
-//     background: var(--pur-grad);
-// }
 

@@ -1,0 +1,31 @@
+mixin card__booking
+
+    .card.card__booking
+        .card__booking__room-number-and-price
+            .card__booking__room-number
+                span № 
+                span 888
+                span люкс
+            .card__booking__price 9 990&#8381; 
+                span в сутки
+        .card__booking__calendar
+            +calendar
+        .card__booking__guests
+            +dropdown({title: "гости", typeGuests: true})
+        .card__booking__total-price
+            span 9 990&#8381; х 4 суток
+            span 39 960&#8381;
+        .card__booking__fee
+            div Сбор за услуги: скидка 2 179&#8381;
+                span i
+            div 0&#8381;
+        .card__booking__additional-fee
+            div Сбор за дополнительные услуги
+                span i
+            div 300&#8381;
+        .card__booking__total
+            span Итого
+            span 38 081&#8381;
+        .card__booking__btn
+            +button({text: "забронировать", isLarge: true})
+

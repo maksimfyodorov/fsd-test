@@ -1,0 +1,14 @@
+mixin card__login
+
+    .card.card__login
+        .card__login__title
+            +widget-title-span("Войти")
+        .card__login__inputs
+            +text-field({placeholder: "Email"})
+            +text-field({placeholder: "Пароль"})
+        .card__login__btn
+            +button({text: "войти", isLarge: true})
+        .card__login
+        .card__login__no-account
+            span Нет аккаунта на Toxin?
+            +button({text: "создать"})

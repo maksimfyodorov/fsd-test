@@ -1,0 +1,32 @@
+mixin card__rooms-carousel(options)
+    -
+        var roomType = ""
+        roomType = options.roomType ? "" : "none"
+        var arrowLeft = "card__rooms-carousel__arrow-left"
+        var arrowRight = "card__rooms-carousel__arrow-right"
+        arrowLeft += options.noArrows ? " none" : ""
+        arrowRight += options.noArrows ? " none" : ""
+
+    .card__rooms-carousel 
+        .card__rooms-carousel__img
+            div(class=arrowLeft)
+            div(class=arrowRight)
+            .card__rooms-carousel__pagination
+                div.active
+                div
+                div
+                div
+            img(src=options.img)
+        .card__rooms-carousel__content
+            .card__rooms-carousel__room-number-and-price
+                .card__rooms-carousel__room-number
+                    span № 
+                    span= options.roomNum
+                    span(class=roomType)= options.roomType
+                .card__rooms-carousel__price
+                    span= `${options.price}₽ `
+                    span в сутки
+            .card__rooms-carousel__reviews
+                +star-rating({starsRated: options.starsRated})
+                div= `${options.reviewsNum} `
+                    span Отзывов

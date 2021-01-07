@@ -1,0 +1,28 @@
+mixin card__account-registration
+
+    .card.card__account-registration
+        .card__account-registration__title
+            +widget-title-span("Регистрация аккаунта")
+        .card__account-registration__user-name
+            +text-field({placeholder: "Имя"})
+            +text-field({placeholder: "Фамилия"})
+        .card__account-registration__radio-btns
+            +radio-btn({text: "Мужчина"})
+            +radio-btn({text: "Женщина"})
+        .card__account-registration__date-of-birth
+            +text-field({placeholder: "ДД.ММ.ГГГГ", title: "дата рождения"})
+        .card__account-registration__login-data
+            +text-field({placeholder: "Email", title: "данные для входа в сервис"})
+            +text-field({placeholder: "Пароль"})
+        .card__account-registration__toggle-btn
+            +toggle-btn({text: "Получать спецпредложения"})
+        .card__account-registration__btn
+            +button({text: "перейти к оплате", isLarge: true})
+        .card__account-registration__account-exist
+            span Уже есть аккаунт на Toxin
+            +button({text: "войти"})
+        
+
+        
+            
+        

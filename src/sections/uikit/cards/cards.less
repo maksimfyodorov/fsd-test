@@ -4,10 +4,26 @@
 
     &__wrap {
         display: flex;
+        justify-content: space-between;
+    }
+
+    &__col-3 {
+        .card__search-room, .card__booking {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__col-3:last-child {
+        .calendar__wrap {
+            margin-bottom: 385px;
+        }
+
+        .card__rooms-carousel:not(:last-child) {
+            margin-bottom: 40px;
+        }
     }
 }
 
-// _______________________________________
 
 
 

@@ -1,6 +1,8 @@
 .label-radio {
     cursor: pointer;
     margin-right: 20px;
+    display: inline-flex;
+    align-items: center;
 }
 
 .real-radio {
@@ -42,4 +44,16 @@
 
 .real-radio:checked + .custom-radio::before {
     transform: translate(-50%, -50%) scale(1);
+}
+
+.radio-text {
+    color: var(--dark-shade-50);
+    
+    &:hover {
+        color: var(--dark-shade-75);
+    }
+}
+
+.real-radio:checked ~ .radio-text {
+    color: var(--dark-shade-75);
 }
