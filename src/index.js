@@ -8,6 +8,7 @@ import './components/uikit/cards/calendar/calendar';
 import './components/uikit/cards/card__search-room/card__search-room';
 import './components/uikit/cards/card__booking/card__booking';
 import './components/uikit/cards/card__login/card__login';
+import './components/uikit/headers-footers/header/header';
 
 
 

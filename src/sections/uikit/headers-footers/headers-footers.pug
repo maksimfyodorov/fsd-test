@@ -1,0 +1,14 @@
+include ../../../components/uikit/headers-footers/header/header
+include ../../../components/uikit/headers-footers/footers/footer
+include ../../../components/uikit/headers-footers/footers/footer-small
+
+section.headers-footers
+    .headers-footers__header
+        +header({})
+        +header({login: "Юлий Цезарь"})
+    .headers-footers__footers
+        .headers-footers__footer
+            +footer
+        .headers-footers__footer-small
+            +footer-small
+    

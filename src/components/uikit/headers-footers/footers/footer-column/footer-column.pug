@@ -1,0 +1,10 @@
+mixin footer-column(title, ...items)
+
+    .footer-column
+        .footer-column__title
+            +label-text-span(title)
+        .footer-column__links
+            each item in items
+                a(href="#")= item
+
+

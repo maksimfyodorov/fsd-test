@@ -1,0 +1,21 @@
+mixin header(options)
+    -
+        var nav = [{text: "О нас", active: "active"}, {text: "Услуги"}, {text: "Вакансии"}, {text: "Новости"}, {text: "Соглашения"}]
+        var login = "header__login"
+        var userName = "header__user-name"
+        login += options.login ? " none" : ""
+        userName += options.login ? "" : " none"
+        
+    .header
+        .container
+            .header__content
+                .header__logo
+                    img(src="./img/uikit/headers-footers/logo-title.svg", alt="Logo")
+                .header__right-side   
+                    .header__nav
+                        for i in nav
+                            a(href="#" class=i.active)= i.text
+                    div(class=login)
+                        +button({text: "войти"})
+                        +button({text: "зарегистрироваться", isBackground: true})
+                    div(class=userName)= options.login

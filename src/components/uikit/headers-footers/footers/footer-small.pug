@@ -1,0 +1,15 @@
+mixin footer-small
+    -
+        var socials = [
+                        {url: "#", src: "./img/uikit/headers-footers/twitter.svg", alt: "Twitter-icon"},
+                        {url: "#", src: "./img/uikit/headers-footers/fb.svg", alt: "Facebook-icon"},
+                        {url: "#", src: "./img/uikit/headers-footers/instagram.svg", alt: "Instagram-icon"},
+                        ]
+
+    .footer.small
+        img(src="./img/uikit/headers-footers/logo-title.svg", alt="Logo")
+        p Copyright &copy; 2018 Toxin отель. Все права зачищены.
+        .footer__social-media
+            each i in socials
+                a(href=i.url)
+                    img(src=i.src, alt=i.alt)
