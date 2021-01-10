@@ -1,5 +1,6 @@
 .header {
-    padding: 15px 0;
+    padding: 17px 0;
+    // padding: 15px 0 15px 0;
     background: #fff;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 
@@ -36,8 +37,8 @@
             &::after {
                 content: "";
                 position: absolute;
-                top: 3px;
-                right: 8px;
+                top: 4px;
+                right: 6px;
                 transform: rotate(-45deg);
         
                 width: 7px;
@@ -58,6 +59,15 @@
     &__login {
         position: relative;
         z-index: 1;
+
+        .button {
+            height: 34px;
+            width: 87px;
+
+            &.bg {
+                width: unset;
+            }
+        }
 
         .button:first-child {
             margin-right: 20px;

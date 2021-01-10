@@ -26,15 +26,15 @@
         padding-bottom: 100px;
 
         .footer-column:nth-child(2) {
-            margin-right: 55px;
+            margin-right: 57px;
         }
 
         .footer-column:nth-child(3) {
-            margin-right: 92px;
+            margin-right: 93px;
         }
 
         .footer-column:nth-child(4) {
-            margin-right: 50px;
+            margin-right: 52px;
         }
     }
 
@@ -53,11 +53,22 @@
     }
 
     &__subscribe {
-        width: 265px;
+        width: 260px;
+        margin-top: 3px;
 
-        .label-text, p {
+        .text-field {
+            width: 260px;
+        }
+
+        .label-text {
+            display: inline-block;
+            margin-bottom: 18px;
+        }
+
+        p {
             display: inline-block;
             margin-bottom: 20px;
+            line-height: 1.8;
         }
     }
 
@@ -72,17 +83,15 @@
         display: flex;
         align-items: center;
 
-        img {
-            margin-right: 20px;
+        a {
+            margin-right: 23px;
+
+            &:last-child {
+                margin-right: 0;
+            }
 
             &:hover {
-                opacity: .7;
-            }
-        }
-
-        a:last-child {
-            img {
-                margin-right: 0;
+                opacity: .5;
             }
         }
     }

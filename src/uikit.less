@@ -13,8 +13,13 @@ body {
 
 .container {
     margin: 0 auto;
-    max-width: 1160px;
+    padding: 0 15px;
+    max-width: 1190px;
     // background-color: green;
+
+    @media(max-width:410px) {
+        padding: 0;
+    }
 }
 
 .bold {
