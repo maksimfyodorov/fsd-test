@@ -1,6 +1,5 @@
 .header {
     padding: 17px 0;
-    // padding: 15px 0 15px 0;
     background: #fff;
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 
@@ -8,20 +7,50 @@
         min-width: 0;
     }
 
+    &__logo {
+        margin-bottom: 20px;
+
+        @media(min-width:500px) {
+            margin-bottom: 0;
+
+        }
+    }
+
     &__content, &__right-side, &__login {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         align-items: center;
+
+        @media(min-width:500px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
 
     &__nav {
         display: flex;
-        text-align: center;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        max-width: 400px;
+        background: #fff;
+        z-index: 4;
+        padding: 20px ;
+        transform: translateX(100%);
 
+        &.active {
+            transform: translateX(0);
+        }
+        
         a {
-            margin-right: 20px;
+            width: fit-content;
+            display: block;
             font-size: 14px;
             color: var(--dark-shade--50);
+            margin-bottom: 20px;
 
             &.active, &:hover {
                 font-weight: 700;
@@ -54,6 +83,26 @@
                 border-left: 2px solid var(--dark-shade-75);
             }
         }
+
+
+        @media(min-width:928px) {  
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            text-align: center;
+            width: auto;
+            max-width: unset;
+            padding: 0;
+            transform: translateX(0%);
+
+            a {
+                margin-bottom: 0;
+                margin-right: 20px;
+            }
+        }
+        
+
+        
     }
 
     &__login {
@@ -63,23 +112,134 @@
         .button {
             height: 34px;
             width: 87px;
+            margin-bottom: 20px;
 
             &.bg {
                 width: unset;
             }
+
+            @media (min-width: 500px) {
+                margin-bottom: 0;
+
+                &:first-child {
+                    margin-right: 20px;
+                }
+            }
+
         }
 
-        .button:first-child {
-            margin-right: 20px;
-        }
+        // .button:first-child {
+        //     margin-bottom: 20px;
+
+        //     @media (min-width: 500px) {
+        //         margin-bottom: 0;
+        //         margin-right: 20px;
+        // }
+
+        
+        // }
+           
+
+        
+
+       
     }
 
     &__user-name {
         height: 30px;
         line-height: 30px;
-        padding-left: 20px;
-        border-left: 1px solid rgba(31, 32, 65, 0.1);;
         font-size: 14px;
         color: var(--dark-shade--50);
+        margin-bottom: 20px;
+
+        @media(min-width:500px) {
+            margin-bottom: 0;
+            padding-right: 20px;
+            border-right: 1px solid rgba(31, 32, 65, 0.1);
+            margin-left: 20px;
+        }
+
+        @media(min-width:928px) { 
+            margin-left: 0;
+            padding-right: 0;
+            padding-left: 30px;
+            border-right: unset;
+            border-left: 1px solid rgba(31, 32, 65, 0.1);
+        }
+    }
+
+    &__toggle-nav {
+        width: 34px;
+        height: 34px;
+        display: flex;
+        cursor: pointer;
+        z-index: 4;
+
+        &.active {
+            span {
+                background: transparent;
+                position: absolute;
+                top: 30px;
+                right: 18px;
+
+                &:after {
+                    transform: rotate(45deg);
+                    top: 0;
+                }
+
+                &:before {
+                    transform: rotate(-45deg);
+                    top: 0;
+                }
+            }
+        }
+
+        span {
+            position: relative;
+            width: 25px;
+            height: 3px;
+            background: var(--pur-grad);
+            margin: auto;
+            transition: .5s;
+
+
+            &::after, &::before {
+                content: '';
+                width: inherit;
+                height: inherit;
+                background: var(--pur-grad);
+                position: absolute;
+                left: 0;
+                top: -8px;
+                transition: .5s;
+            }
+
+            &::before {
+                top: 8px;
+            }
+        }
+
+        @media(min-width:500px) {
+            margin-left: 15px;
+        }
+
+        @media(min-width:928px) {
+            display: none;
+        }
+    }
+
+    &__overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, .5);
+        z-index: 2;
+        display: none;
+
+        &.active {
+            display: block;
+        }
     }
 }

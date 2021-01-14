@@ -3,14 +3,16 @@ include ../../components/uikit/form-elements/button/button
 include ../../components/uikit/cards/card__search-room/card__search-room
 include ../../components/uikit/cards/calendar/calendar
 include ../../components/uikit/headers-footers/footers/footer
+include ../../components/uikit/headers-footers/footers/footer-small
 
 
 
-header.landing__header.none
+header.landing__header
     +header({})
+    //- +header({login: "юлий цезарь"})
 main.landing__main
     .container
         +card__search-room
         p Лучшие номера для вашей работы, отдыха и просто вдохновения
-footer.landing__footer.none
+footer.landing__footer
     +footer
